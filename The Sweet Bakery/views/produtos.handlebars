@@ -1,0 +1,46 @@
+<div class = "conteudo">
+    <div class="container">
+        <h2>Pães</h2>
+        <ul class="conteudo-materiais">
+             {{#each paes}}
+            <li class="conteudo-materiais-lista">
+                <i class="fas fa-bread-slice fa-3x"></i>
+                <p class="nome">{{dataValues.nome}}</p>
+                <p>{{dataValues.valor}} (kg)</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div> 
+</div>
+
+<div class = "conteudo">
+    <div class="container">
+        <h2>Salgados</h2>
+        <ul class="conteudo-materiais">
+             {{#each salgados}}
+             
+            <li class="conteudo-materiais-lista">
+                <i class="fas fa-hotdog fa-3x"></i>
+                <p class="nome">{{dataValues.nome}}</p>
+                <p>{{dataValues.valor}} (unid)</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div> 
+</div>
+
+<div class = "conteudo">
+    <div class="container">
+        <h2>Bolos</h2>
+        <ul class="conteudo-materiais">
+             {{#each bolos}}
+             
+            <li class="conteudo-materiais-lista">
+                <i class="fas fa-birthday-cake fa-3x"></i>
+                <p class="nome">{{dataValues.nome}}</p>
+                <p>{{dataValues.valor}} (unid)</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div> 
+</div>

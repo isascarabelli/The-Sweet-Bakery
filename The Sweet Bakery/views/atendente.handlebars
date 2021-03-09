@@ -1,0 +1,44 @@
+{{#if message}}
+<div style="text-align: center" class="alert alert-{{message.type}}">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>{{message.intro}}</strong> {{message.message}}
+</div> 
+{{/if}}
+
+
+<form class="form" action="/reconhecer" method="POST"> 
+	<div class="field">
+		<label for="cpfrec">Reconhecer cliente: </label>
+		<input type="text" id="cpfrec" name="cpfrec" placeholder="Digite o cpf completo <apenas números>" required>
+	</div>
+    <input type="submit" name="acao" value="Enviar">
+</form>
+
+{{#each endereco}}
+	<p>Endereço: {{dataValues.endereco}}</p>
+{{/each}}
+<p>Pedidos frequentes: </p>
+{{#each pedidos}}
+	<p>- {{dataValues.produto}}</p>
+{{/each}}
+<form class="form" action="/registro" method="POST"> 
+	<div class="field">
+		<label for="data">Registro de pedidos: </label>
+		<input type="date" id="data" name="data" placeholder="Selecione a data" required>
+	</div>
+    <input type="submit" name="acao" value="Enviar">
+</form>
+{{#each registros}}
+	{{#if dataValues.confirmaentrega}}
+		<p>{{dataValues.produto}} / {{dataValues.dataentrega}} / {{dataValues.horarioentrega}} / ENTREGUE</p>
+	{{else}}
+		<p>{{dataValues.produto}} / {{dataValues.dataentrega}} / {{dataValues.horarioentrega}} / NÃO ENTREGUE</p>
+	{{/if}}
+{{/each}}
+<form class="form" action="/confirmar" method="POST"> 
+	<div class="field">
+		<label for="idpedido">Confirmação de entrega: </label>
+		<input type="number" id="idpedido" name="idpedido" placeholder="Digite o ID do pedido" required>
+	</div>
+    <input type="submit" name="acao" value="Enviar">
+</form>

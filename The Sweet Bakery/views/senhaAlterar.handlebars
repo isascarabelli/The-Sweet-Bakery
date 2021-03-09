@@ -1,0 +1,24 @@
+
+{{#if message}}
+<div style="text-align: center" class="alert alert-{{message.type}}">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>{{message.intro}}</strong> {{message.message}}
+</div> 
+{{/if}}
+
+
+
+
+<form class="formulario" action="/senhaAlterar" method="POST"> 
+	<p>Redefir Senha</p>
+	<div class="field">
+		<label for="cpf">CPF: </label>
+		<input type="text" id="cpf" name="cpf" placeholder="Digite seu cpf" required>
+	</div>
+	<div class="field">
+		<label for="senha">Senha: </label>
+			<input type="text" id="senha" name="senha" placeholder="Digite sua nova senha" required>
+	</div>
+	
+    <input type="submit" name="acao" value="Enviar">
+</form>

@@ -1,0 +1,271 @@
+body {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+main{
+    padding: 20px;
+    min-height: 100%;
+    margin: 0 auto -50px;
+}
+/*cabecalho*/
+
+.cabecalho .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    height: 100%;
+}
+
+.cabecalho{
+    height:150px;
+    background-color: #a0e7e5;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.cabecalho .titulo{
+    color: #FFAEBC;
+    font-weight: bold;
+}
+
+.cabecalho-nav a{
+    font-size:20px;
+    padding: 15px;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+    margin:2rem;
+}
+  
+.cabecalho-nav a:hover{
+    color:#FFAEBC;
+    font-weight: 600;
+}
+  
+#cabecalho-nav-link{
+    color:black;
+}
+
+/*card produtos*/
+
+.conteudo{
+	margin: 20px 5%;
+	width: 90%;	
+}
+
+.conteudo ul{
+    list-style: none;
+}
+
+.conteudo h2{
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 8px;
+}
+
+.conteudo-materiais{
+	display: flex;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.conteudo-materiais-lista{
+
+	font-size:20px;
+	text-align: center;
+	height: 100px;
+	background-color:  white;
+	border:2px solid black;
+	width: 23%;
+	margin: 1%;
+	box-shadow: 2px 2px 2px #838383;
+    margin-top: 30px;
+	height: 11em;
+	display: static;
+    align-items: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+  		
+}
+
+a:link{
+  text-decoration: none;
+}
+
+.conteudo-materiais-lista:hover{
+	box-shadow: 5px 5px 5px #838383;
+	font-size: 21px;
+}
+
+.conteudo-materiais-lista:nth-child(4n){
+	margin-right: 0;
+}
+
+.conteudo-materiais-lista:nth-child(4n + 1){
+	margin-left: 0;
+}
+
+.conteudo-materiais-lista .nome{
+  margin-top: 60px;
+}
+
+.conteudo-materiais-lista p:after {
+	display: block;
+	width: 45px;
+	height: 45px;
+    margin: 0px auto;
+}
+
+/*rodapé*/
+
+.rodape{
+    background-color: #B4F8C8;
+}  
+
+.rodape-final{
+    padding-top: 30px;
+    height:150px;
+}
+  
+.rodape-final-paragrafo{
+    margin-top: 20px;   
+    text-align: center;
+    color: black;
+}
+  
+.rodape-final-creditos{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+/*formulario*/
+
+.formulario{
+    width: 40%;
+    padding: 30px;
+    border:1px solid #ccc;
+    margin: 40px auto;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 3px 3px 3px #838383;
+}
+
+.formulario p{
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+  
+.field{
+    width: 100%;
+    margin: 15px 0;
+}
+  
+.field label{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+}
+  
+.radiobox label{
+    width: auto;
+    display: inline-block;
+}
+  
+input[type=text],
+input[type=number] {
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+  
+input[type=date],
+input[type=time], select{
+    width: 161px;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+  
+input[type=submit]{
+    font-weight: bold;
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/*pagina de cliente*/
+
+
+/*pagina atendente*/
+
+.form{
+    width: 30%;
+    margin-top: 50px;
+}
+
+.form .field{
+    width: 100%;
+    margin: 15px 0;
+}
+  
+.form .field label{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+}
+
+.form input{
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type=submit]{
+    font-weight: bold;
+    display: block;
+    background-color: #a0e7e5;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0px 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.form:first-child+form{
+    margin: 110px 0px;
+
+}
