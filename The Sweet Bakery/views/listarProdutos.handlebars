@@ -1,0 +1,16 @@
+<h1>Tabela dos Produtos:</h1>
+
+<table class="tabelabd">
+    <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Valor</th>
+    </tr>
+    {{#each posts}}
+        <tr>
+        <td>{{dataValues.id}}</td>
+        <td>{{dataValues.nome}}</td>
+        <td>{{dataValues.valor}}</td>
+        </tr>
+    {{/each}}
+</table>
