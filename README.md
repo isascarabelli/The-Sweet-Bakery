@@ -20,7 +20,7 @@ node app.js
  ```
 Para finalizar abra o browser e digite: localhost:8081
 
-##Funcionamento do site
+## Funcionamento do site
 
 Na página principal há cards com todos os produtos, de teste, da padaria, assim o cliente saberá o que escolher, e o preço, na hora de fazer o pedido.
 Para fazer o pedido é necessário ter um cadastro, isso é possível clicando no "cadastre-se", que se encontra no cabeçalho da página. Caso já tenha uma conta, basta clicar em "Login".
@@ -33,7 +33,7 @@ As funcionalidades exclusivas são:
 * Confirmação de entrega (Ao digitar o ID do pedido o status dele mudará para "entregue")
 * Exibir tabelas do banco de dados (Ao selecionar a tabela, produtos ou usuários ou pedidos, será exibido os dados da tabela escolhida)
 
-##Grupo:
+## Grupo:
 * Isabela Ferreira Scarabelli
 * Tainara Marina Gonçalves Morais
 * Tatiane Vitória de Oliveira
