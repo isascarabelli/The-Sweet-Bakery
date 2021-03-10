@@ -1,6 +1,5 @@
 # The-Sweet-Bakery
-Trabalho de banco de dados desenvolvido para a matéria de Desenvolvimento de Aplicativos para Web por Isabela Ferreira Scarabelli, Tainara Marina Gonçalves Morais e Tatiane Vitoria de Oliveira.
-# Sistema de Gestão de Entrega em uma Padaria
+## Sistema de Gestão de Entrega em uma Padaria
 
 ## Como testar
 
