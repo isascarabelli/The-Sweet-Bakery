@@ -1,5 +1,4 @@
-# The-Sweet-Bakery
-## Sistema de Gestão de Entrega em uma Padaria
+# The-Sweet-Bakery // Sistema de Gestão de Entrega em uma Padaria
 
 ## Como testar
 
