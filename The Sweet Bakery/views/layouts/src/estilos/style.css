@@ -269,3 +269,37 @@ input[type=submit]{
     margin: 110px 0px;
 
 }
+
+.botaobd {
+    font-weight: bold;
+    background-color: #a0e7e5;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 15px;
+    color: black;
+ }
+ 
+ .botaobd:hover {
+    background-color:  #63c7c4;
+ }
+
+.botoesvisu{
+    margin-top: 50px;
+}
+
+.botoesvisu p{
+    margin: 30px 0;
+}
+
+.tabelabd th,td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 20%;
+}
