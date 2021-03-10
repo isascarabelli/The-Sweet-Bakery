@@ -1,0 +1,22 @@
+<h1>Tabela dos Pedidos:</h1>
+
+<table class="tabelabd">
+	<tr>
+		<th>ID</th>
+		<th>Produto</th>
+		<th>Quantidade</th>
+		<th>CPF do cliente</th>
+		<th>Data</th>
+		<th>Horário</th>
+	</tr>
+  {{#each posts}}
+    <tr>
+      <td>{{dataValues.id}}</td>
+      <td>{{dataValues.produto}}</td>
+      <td>{{dataValues.quantidade}}</td>
+      <td>{{dataValues.cpfcliente}}</td>
+      <td>{{dataValues.dataentrega}}</td>
+      <td>{{dataValues.horarioentrega}}</td>
+    </tr>
+  {{/each}}
+</table>
