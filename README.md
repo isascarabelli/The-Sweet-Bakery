@@ -30,6 +30,7 @@ Se o cliente esquecer a senha, poderá alterá-la clicando no "Alterar Senha" lo
 Quando o login for realizado com sucesso, será redirecionado para uma página com um link para um formulário para ser realizado o pedido.
 
 Para acessar as outras funcionalidades, que são exclusivas para funcionários da padaria, basta fazer o login com o nome "atendente" e senha "tsbatendente".
+
 As funcionalidades exclusivas são: 
 * Reconhecer o cliente (Ao reconhecer o CPF o atendente sabe o endereço e os pedidos frequentes do usuário.)
 * Registro de pedidos (pedido/data/hora/status do pedido)
