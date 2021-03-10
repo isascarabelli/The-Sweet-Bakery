@@ -14,7 +14,7 @@ npm install --save body-parser
 npm install --save cookie-parser express-session
  ```
 
-Agora dê seguinte comando, ainda dentro da pasta no terminal:
+Agora dê o seguinte comando, ainda dentro da pasta no terminal:
 ```
 node app.js
  ```
