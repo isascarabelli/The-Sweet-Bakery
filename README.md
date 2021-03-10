@@ -24,8 +24,11 @@ Para finalizar abra o browser e digite: localhost:8081
 
 Na página principal há cards com todos os produtos, de teste, da padaria, assim o cliente saberá o que escolher, e o preço, na hora de fazer o pedido.
 Para fazer o pedido é necessário ter um cadastro, isso é possível clicando no "cadastre-se", que se encontra no cabeçalho da página. Caso já tenha uma conta, basta clicar em "Login".
+
 Se o cliente esquecer a senha, poderá alterá-la clicando no "Alterar Senha" localizado no cabeçalho da página.
+
 Quando o login for realizado com sucesso, será redirecionado para uma página com um link para um formulário para ser realizado o pedido.
+
 Para acessar as outras funcionalidades, que são exclusivas para funcionários da padaria, basta fazer o login com o nome "atendente" e senha "tsbatendente".
 As funcionalidades exclusivas são: 
 * Reconhecer o cliente (Ao reconhecer o CPF o atendente sabe o endereço e os pedidos frequentes do usuário.)
