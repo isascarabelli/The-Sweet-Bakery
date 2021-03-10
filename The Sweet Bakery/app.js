@@ -5,9 +5,8 @@ const bodyParser = require('body-parser')
 const Produtos = require('./models/Produtos')
 const Usuarios = require('./models/Usuarios')
 const Pedidos = require('./models/Pedidos')
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
-
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
 
 //Config
     //template engine
@@ -19,7 +18,6 @@ const session = require('express-session');
     app.use(cookieParser('secret'))
     app.use(session({cookie: {maxAge: null}}))
 
-
 app.use(express.static('views/layouts/src'))
 
 //flash message
@@ -28,7 +26,6 @@ app.use((req,res, next)=>{
     delete req.session.messages
     next()
 })
-
 
 app.get('/', function(req, res){
     Produtos.findAll({
@@ -56,8 +53,7 @@ app.get('/cadastro', function(req, res){
     res.render('cadastro')
 })
 
-app.post('/cadastro', function(req, res){
-   
+app.post('/cadastro', function(req, res){  
         Usuarios.create({
             nome: req.body.nome,
             cpf: req.body.cpf,
@@ -65,7 +61,6 @@ app.post('/cadastro', function(req, res){
             endereco: req.body.endereco,
             senha: req.body.senha
         }).then(function(){
-            //criar alerta de cadastro feito com sucesso
             console.log("Cadastro feito com sucesso!")
             req.session.message = {
                 type: 'success',
@@ -74,7 +69,6 @@ app.post('/cadastro', function(req, res){
             }
             res.redirect('/cadastro')
         }).catch(function(erro){
-            //criar alerta de cadastro não concluído
             console.log("Erro ao cadastrar:" + erro)
             req.session.message = {
                 type: 'danger',
@@ -85,12 +79,17 @@ app.post('/cadastro', function(req, res){
     
 })
 
-//app.get('/senhaAlterar', function(req, res){
-//    Usuarios.update({ senha },{
-//        where:{
-//            id: req.body.nome
-//        }
-//})
+app.get('/listarProdutos', function(req, res){
+    Produtos.findAll().then(function(posts){
+        res.render('listarProdutos', {posts: posts})
+    })
+})
+
+app.get('/listarUsuarios', function(req, res){
+    Usuarios.findAll().then(function(posts){
+        res.render('listarUsuarios', {posts: posts})
+    })
+})
 
 app.get('/senhaAlterar', function(req, res){
     res.render('senhaAlterar')
@@ -101,10 +100,8 @@ app.post('/senhaAlterar', function(req, res){
         where:{
             cpf: req.body.cpf
             } 
-})
-    //criar alerta de senha alterada com sucesso
+    })
     .then(function(){
-    //criar alerta erro ao alterar a senha
     console.log("Senha alterada com sucesso!")
     req.session.message = {
         type: 'success',
@@ -153,8 +150,7 @@ app.post('/login', function(req, res){
     }else if(req.body.nome == 'atendente'){
         if(req.body.senha == 'tsbatendente'){
             res.render('atendente')
-        }else{
-            //criar alerta de senha errada para o usuario atendente
+        }else if(req.body.senha != 'tsbatendente'){
             console.log("erro na senha!" + erro)
             req.session.message = {
                 type: 'danger',
@@ -179,7 +175,6 @@ app.post('/pedido', function(req, res){
         horarioentrega: req.body.horaentrega,
         confirmaentrega: 0
     }).then(function(){
-        //criar alerta de pedido feito com sucesso
         console.log("Pedido realizado com sucesso!")
             req.session.message = {
                 type: 'success',
@@ -188,7 +183,6 @@ app.post('/pedido', function(req, res){
             }
         res.redirect('/pedido')       
     }).catch(function(erro){
-        //criar alerta de erro
         console.log("erro ao criar o pedido: " +erro)
         req.session.message = {
             type: 'danger',
@@ -231,7 +225,6 @@ app.post('/confirmar', function(req, res){
             id: req.body.idpedido
         }
     }).then(function(){
-        //alerta de entrega confirmada
         console.log('entrega confirmada')
         req.session.message = {
             type: 'success',
@@ -240,7 +233,6 @@ app.post('/confirmar', function(req, res){
         }
         res.render('atendente')
     }).catch(function(){
-        //alerta de erro ao confirmar entrega
         console.log('Confira se o id do pedido está certo' + erro)
         req.session.message = {
             type: 'danger',
@@ -251,12 +243,22 @@ app.post('/confirmar', function(req, res){
     })
 })
 
-
-app.get('/cliente', function(req, res){
-    res.render('cliente')
+app.get('/listarProdutos', function(req, res){
+    Produtos.findAll().then(function(posts){
+        res.render('listarProdutos', {posts: posts})
+    })
 })
-app.get('/atendente', function(req,res){
-    res.render('atendente')
+
+app.get('/listarUsuarios', function(req, res){
+    Usuarios.findAll().then(function(posts){
+        res.render('listarUsuarios', {posts: posts})
+    })
+})
+
+app.get('/listarPedidos', function(req, res){
+    Pedidos.findAll().then(function(posts){
+        res.render('listarPedidos', {posts: posts})
+    })
 })
 
 app.listen(8081)
