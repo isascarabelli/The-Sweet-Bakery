@@ -1,0 +1,20 @@
+<h1>Tabela dos Usuários:</h1>
+
+<table class="tabelabd">
+    <tr>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>Telefone</th>
+    <th>Endereço</th>
+    <th>Senha</th>
+    </tr>
+    {{#each posts}}
+        <tr>
+        <td>{{dataValues.nome}}</td>
+        <td>{{dataValues.cpf}}</td>
+        <td>{{dataValues.telefone}}</td>
+        <td>{{dataValues.endereco}}</td>
+        <td>{{dataValues.senha}}</td>
+        </tr>
+    {{/each}}
+</table>
